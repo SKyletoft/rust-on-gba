@@ -16,4 +16,7 @@ clean:
 	cargo clean
 	-rm out -rf
 
-.PHONY: target/thumbv4t-none-eabi/release/rust-on-gba clean
+install: out/game.gba
+	cp out/game.gba /run/media/$$USER/PHONE\ CARD
+
+.PHONY: target/thumbv4t-none-eabi/release/rust-on-gba clean install
